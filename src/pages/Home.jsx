@@ -22,7 +22,7 @@ const peerConnectionConfig = {
   ]
 };
 
-const socket = io({host}, {
+const socket = io(host, {
   withCredentials: true,
 });
 
