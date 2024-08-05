@@ -32,7 +32,7 @@ export default function SignUp() {
         console.log('Piece data posted successfully:',response);
         Cookies.set('username', response.data.user.username);
         Cookies.set('userID', response.data.user._id);
-        navigate('/home');
+        navigate('/ChatterBoxFront/home');
       } else {
         console.error('Error posting piece data:',response);
       }
@@ -102,7 +102,7 @@ function submit(event){
         <FormInput key={"password"} name="Password" type="password" minLength={8} maxLength={50} setValues={setPassword}/>
         <FormButton key={"submit"} name="Submit"/> 
       </Form>
-      <Button name={"Login"} path={"/login"} />
+      <Button name={"Login"} path={"/ChatterBoxFront/login"} />
     </div>
   )
 }
