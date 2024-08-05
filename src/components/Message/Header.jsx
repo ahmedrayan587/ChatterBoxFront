@@ -1,8 +1,9 @@
 import React, { useState, useRef, useEffect } from 'react';
 import './Header.css'
 import io from 'socket.io-client';
+import { host } from '../../utils/APIRoutes';
 
-const socket = io('http://localhost:5000', {
+const socket = io({host}, {
   withCredentials: true,
 });
 
