@@ -1,4 +1,4 @@
-export const host = "http://localhost:5000";
+export const host = "https://chatter-box-back.vercel.app/";
 export const registerRoute = `${host}/auth/register`;
 export const loginRoute = `${host}/auth/login`;
 export const getAllUsersRoute = `${host}/auth/allUsers`; /* /:id */
