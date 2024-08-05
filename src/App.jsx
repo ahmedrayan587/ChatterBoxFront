@@ -24,9 +24,9 @@ export default function App() {
           />
       <Router>
         <Routes>
-          <Route path='/' element={<SignUp />} />
-          <Route path='/login' element={<Login />} />
-          <Route path='/home' element={<Home />} />
+          <Route path='/ChatterBoxFront/' element={<SignUp />} />
+          <Route path='/ChatterBoxFront/login' element={<Login />} />
+          <Route path='/ChatterBoxFront/home' element={<Home />} />
         </Routes>
       </Router>
     </>
