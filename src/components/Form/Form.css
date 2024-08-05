@@ -1,0 +1,307 @@
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    min-height: calc(100vh - 80px);
+    min-width: 100vw;
+  }
+  .container form{
+    margin: 30px 0;
+  }
+  a{
+    text-decoration: none!important;
+  }
+  .form-title {
+    color: var(--main-color);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: block;
+    font-weight: bold;
+    font-size: x-large;
+    margin-top: 1.5em;
+  }
+
+  .card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 350px;
+    width: 300px;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 15px;
+    background-color: var(--form-background-color)!important;
+    box-shadow: 16px 16px 32px #c8c8c8, -16px -16px 32px #fefefe;
+    border-radius: 8px;
+    padding-bottom: 20px;
+  }
+  .validation-text {
+    font-size: 13px;
+    margin-bottom: 15px;
+    color: crimson;
+    font-weight: 700;
+  }
+  /*input file*/
+  .fileUploadWrapper {
+    width: 250px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  input[type="file"] {
+    display: none;
+  }
+  .fileUploadWrapper label {
+    cursor: pointer;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    position: relative;
+  }
+  .fileUploadWrapper label svg {
+    height: 18px;
+  }
+  .fileUploadWrapper label svg path {
+    transition: all 0.3s;
+  }
+  .fileUploadWrapper label svg circle {
+    transition: all 0.3s;
+  }
+  .fileUploadWrapper label:hover svg path {
+    stroke: #fff;
+  }
+  .fileUploadWrapper label:hover svg circle {
+    stroke: #fff;
+    fill: #3c3c3c;
+  }
+  .fileUploadWrapper label .user{
+    margin-left: 10px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 80%;
+  }
+  
+  /*end input file*/
+
+  .inputBox,
+  .inputBox1 {
+    position: relative;
+    width: 250px;
+  }
+
+  .inputBox input,
+  .inputBox textarea,
+  .inputBox .custom-select,
+  .inputBox1 input {
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    border: none;
+    color: var(--main-color);
+    font-size: 1em;
+    font-weight: 500;
+    background: transparent;
+    border-left: 2px solid var(--main-color);
+    border-bottom: 2px solid var(--main-color);
+    transition: 0.5s;
+    border-bottom-left-radius: 8px;
+  }
+  .inputBox .custom-select {
+    cursor: pointer;
+  }
+
+  .inputBox span,
+  .inputBox .span,
+  .inputBox1 span {
+    margin-top: 5px;
+    position: absolute;
+    left: 0;
+    transform: translateY(-4px);
+    margin-left: 10px;
+    padding: 10px;
+    pointer-events: none;
+    font-size: 12px;
+    color: var(--main-color);
+    text-transform: uppercase;
+    transition: 0.5s;
+    letter-spacing: 1px;
+    border-radius: 8px;
+  }
+  
+  .inputBox .typed ~ span,
+  .inputBox input:valid ~ span,
+  .inputBox input:focus ~ span,
+  .inputBox textarea:valid ~ span,
+  .inputBox textarea:focus ~ span,
+  .inputBox .custom-select:valid ~ .span,
+  .inputBox .custom-select:focus ~ .span {
+    transform: translateX(0px) translateY(-21px);
+    font-size: 0.8em;
+    padding: 5px 10px;
+    background: var(--form-background-color);
+    letter-spacing: 0.2em;
+    color: var(--main-color);
+    border: 2px;
+  }
+
+  .inputBox1 input:valid ~ span,
+  .inputBox1 input:focus ~ span {
+    transform: translateX(0px) translateY(-21px);
+    font-size: 0.8em;
+    padding: 5px 10px;
+    background: var(--form-background-color);
+    letter-spacing: 0.2em;
+    color: var(--main-color);
+    border: 2px;
+  }
+
+  .inputBox .typed,
+  .inputBox input:valid,
+  .inputBox input:focus,
+  .inputBox textarea:valid,
+  .inputBox textarea:focus,
+  .inputBox .custom-select:valid,
+  .inputBox .custom-select:focus,
+  .inputBox1 input:valid,
+  .inputBox1 input:focus {
+    border: 2px solid var(--main-color);
+    border-radius: 8px;
+    padding: 10px;
+  }
+  .custom-options {
+    display: none;
+  }
+  .custom-options {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    display: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    background-color: var(--form-background-color);
+    color: var(--main-color);
+    z-index: 2;
+  }
+
+  .custom-options div {
+    padding: 6px 9px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .custom-options div:hover {
+    background-color: #fff;
+    color: rgba(0, 0, 0, 0.797);
+  }
+
+  .custom-select-wraper::after {
+    content: "";
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translate(0, -25%);
+    border: 5px solid var(--main-color);
+    border-right-color: transparent;
+    border-left-color: transparent;
+    border-bottom-color: transparent;
+  }
+  .button {
+    --color: var(--main-color);
+    padding: 0.8em 1.7em;
+    background-color: white;
+    border-radius: 0.3em;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.5s;
+    font-weight: 600;
+    font-size: 17px;
+    border: 1px solid var(--main-color);
+    font-family: inherit;
+    text-transform: uppercase;
+    color: var(--color);
+    z-index: 1;
+    opacity: 1;
+  }
+
+  .button::before,
+  .button::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 50px;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    border-radius: 50%;
+    z-index: -1;
+    background-color: var(--color);
+    transition: 1s ease;
+  }
+
+  .button::before {
+    top: -1em;
+    left: -1em;
+  }
+
+  .button::after {
+    left: calc(100% + 1em);
+    top: calc(100% + 1em);
+  }
+
+  .button:hover::before,
+  .button:hover::after {
+    height: 410px;
+    width: 410px;
+  }
+
+  .button:hover {
+    color: white;
+  }
+
+  .button:active {
+    filter: brightness(0.8);
+  }
+  .inf {
+    width: 100%;
+    display: flex;
+    padding: 0 25px;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .lb {
+    font-size: 1.3em;
+    font-weight: 600;
+    width: 100%;
+    color: var(--main-color);
+    margin: 5px;
+  }
+  .backup label{
+    cursor: pointer;
+  }
+  .backup input {
+    width: 20px;
+    height: 20px;
+    margin: 7px 10px;
+    accent-color: var(--main-color);
+    cursor: pointer;
+  }
+  .backup label:checked {
+    font-size: 15px;
+    font-weight: 500;
+    width: fit-content;
+    cursor: pointer;
+  }
+  .row > * {
+    width: fit-content;
+  }

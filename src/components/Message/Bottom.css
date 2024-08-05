@@ -1,0 +1,34 @@
+.chat-input {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #f0f2f5;
+    border-top: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    width: 100%;
+  }
+
+  .emoji-picker {
+    position: absolute;
+    bottom: 60px;
+    left: 0;
+  }
+  
+  .emoji {
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  
+  .message-input {
+    flex-grow: 1;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 10px;
+  }
+  
+  .message-input:focus {
+    outline: none;
+  }
+  
