@@ -53,7 +53,7 @@ async function fetchData() {
       console.log('Piece data posted successfully:',response);
       Cookies.set('username', response.data.user.username);
       Cookies.set('userID', response.data.user._id);
-      navigate('/home');
+      navigate('/ChatterBoxFront/home');
     } else {
       toast.dismiss();
       toast.error(response.data.msg);
@@ -77,7 +77,7 @@ async function fetchData() {
         <FormInput key={"password"} name="Password" type="password" minLength={8} maxLength={50} setValues={setPassword}/>
         <FormButton key={"submit"} name="Submit"/> 
       </Form>
-      <Button name={"SignUp"} path={"/"} />
+      <Button name={"SignUp"} path={"/ChatterBoxFront/"} />
     </div>
   )
 }
